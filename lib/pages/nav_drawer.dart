@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:mileage_calculator/pages/home.dart';
 import 'package:mileage_calculator/pages/settings_page.dart';
 import 'package:mileage_calculator/pages/contact_us.dart';
+import 'package:mileage_calculator/components/gradient_appbar.dart';
 
 class DrawerItem {
   String title;

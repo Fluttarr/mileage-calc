@@ -12,7 +12,6 @@ class MyApp extends StatelessWidget {
         title: appTitle,
         home: new NavPage(),
         theme: ThemeData(
-          brightness: Brightness.dark,
           primaryColor: Colors.orange,
           accentColor: Colors.cyan[600],
         ));
