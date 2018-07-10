@@ -27,10 +27,15 @@ class NavPage extends StatefulWidget {
 class NavPageState extends State<NavPage> {
   int _selectedDrawerIndex = 0;
 
-  _getDrawerItemWidget(int pos) {
+  _getDrawerItemWidget(int pos, String title) {
     switch (pos) {
       case 0:
-        return new HomePage();
+        return new Column(
+          children: <Widget>[
+            new GradientAppBar(title),
+            new HomePage(),
+          ],
+        );
       case 1:
         return new SettingsPage();
       case 2:
@@ -58,11 +63,11 @@ class NavPageState extends State<NavPage> {
       ));
     }
     return new Scaffold(
-      appBar: new AppBar(
-        // here we display the title corresponding to the fragment
-        // you can instead choose to have a static title
-        title: new Text(widget.drawerItems[_selectedDrawerIndex].title),
-      ),
+      // appBar: new AppBar(
+      //   // here we display the title corresponding to the fragment
+      //   // you can instead choose to have a static title
+      //   title: new Text(widget.drawerItems[_selectedDrawerIndex].title),
+      // ),
       drawer: new Drawer(
         child: new Column(
           children: <Widget>[
@@ -72,7 +77,8 @@ class NavPageState extends State<NavPage> {
           ],
         ),
       ),
-      body: _getDrawerItemWidget(_selectedDrawerIndex),
+      body: _getDrawerItemWidget(
+          _selectedDrawerIndex, widget.drawerItems[_selectedDrawerIndex].title),
     );
   }
 }

@@ -9,20 +9,31 @@ class GradientAppBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final double statusBarHeight = MediaQuery.of(context).padding.top;
-
+    var _hamburgerMenu = new IconButton(
+        color: Colors.white,
+        onPressed: () {
+          Scaffold.of(context).openDrawer();
+        },
+        icon: const Icon(
+          Icons.menu,
+          color: Colors.white,
+        ),
+        tooltip: 'Open navigation menu');
     return new Container(
       padding: new EdgeInsets.only(top: statusBarHeight),
       height: statusBarHeight + barHeight,
-      child: new Center(
-        child: new Text(
+      child: new Row(children: <Widget>[
+        _hamburgerMenu,
+        new Center(
+            child: new Text(
           title,
           style: const TextStyle(
               color: Colors.white,
               fontFamily: 'Poppins',
-              fontWeight: FontWeight.w600,
-              fontSize: 36.0),
-        ),
-      ),
+              fontWeight: FontWeight.w500,
+              fontSize: 30.0),
+        ))
+      ]),
       decoration: new BoxDecoration(
         gradient: new LinearGradient(
             colors: [const Color(0xFF3366FF), const Color(0xFF00CCFF)],
