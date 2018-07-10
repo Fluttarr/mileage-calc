@@ -37,9 +37,20 @@ class NavPageState extends State<NavPage> {
           ],
         );
       case 1:
-        return new SettingsPage();
+        return new Column(
+          children: <Widget>[
+            new GradientAppBar(title),
+            new SettingsPage(),
+          ],
+        );
+
       case 2:
-        return new ContactUsPage();
+        return new Column(
+          children: <Widget>[
+            new GradientAppBar(title),
+            new ContactUsPage(),
+          ],
+        );
       default:
         return new Text("Error");
     }
@@ -72,7 +83,19 @@ class NavPageState extends State<NavPage> {
         child: new Column(
           children: <Widget>[
             new UserAccountsDrawerHeader(
-                accountName: new Text("Hey Buddy!"), accountEmail: null),
+                decoration: new BoxDecoration(
+                  gradient: new LinearGradient(
+                      colors: [
+                        const Color(0xFF3366FF),
+                        const Color(0xFF00CCFF)
+                      ],
+                      begin: const FractionalOffset(0.0, 0.0),
+                      end: const FractionalOffset(1.0, 0.0),
+                      stops: [0.0, 1.0],
+                      tileMode: TileMode.clamp),
+                ),
+                accountName: new Text("Hey Buddy!"),
+                accountEmail: null),
             new Column(children: drawerOptions)
           ],
         ),

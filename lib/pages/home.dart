@@ -29,30 +29,37 @@ class HomePage extends StatelessWidget {
                 child: new ListView(
                   children: <Widget>[
                     new TextFormField(
-                      style: TextStyle(color: Colors.white),
                       keyboardType: TextInputType.number,
                       decoration: new InputDecoration(
                           fillColor: Colors.black,
                           hintText: 'No. of litres',
                           labelText: 'Litres'),
                     ),
-                    new TextFormField(
-                      keyboardType: TextInputType.number,
-                      decoration: new InputDecoration(
-                          hintText: 'From Kilometer', labelText: 'Kilometers'),
-                    ),
-                    new TextFormField(
-                      keyboardType: TextInputType.number,
-                      decoration: new InputDecoration(
-                          hintText: 'To Kilometer', labelText: 'Kilometers'),
-                    ),
+                    new Padding(
+                        padding: EdgeInsets.fromLTRB(0.0, 12.0, 0.0, 12.0),
+                        child: new TextFormField(
+                          keyboardType: TextInputType.number,
+                          decoration: new InputDecoration(
+                            hintText: 'From Kilometer',
+                          ),
+                        )),
+                    new Padding(
+                        padding: EdgeInsets.fromLTRB(0.0, 12.0, 0.0, 12.0),
+                        child: new TextFormField(
+                          keyboardType: TextInputType.number,
+                          decoration:
+                              new InputDecoration(hintText: 'To Kilometer'),
+                        )),
                     new Padding(
                         padding: EdgeInsets.all(20.0),
                         child: new RaisedButton(
-                            elevation: 5.0,
-                            padding: EdgeInsets.all(10.0),
-                            textColor: Colors.black,
+                            color: const Color(0xFF3366FF),
+                            padding: EdgeInsets.fromLTRB(0.0, 18.0, 0.0, 18.0),
+                            elevation: 9.0,
+                            textColor: Colors.white,
                             child: new Text("Calculate"),
+                            shape: new RoundedRectangleBorder(
+                                borderRadius: new BorderRadius.circular(30.0)),
                             onPressed: () {
                               showDialog(
                                   context: context,

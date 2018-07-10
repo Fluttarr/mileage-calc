@@ -17,6 +17,7 @@ class GradientAppBar extends StatelessWidget {
         icon: const Icon(
           Icons.menu,
           color: Colors.white,
+          size: 30.0,
         ),
         tooltip: 'Open navigation menu');
     return new Container(
