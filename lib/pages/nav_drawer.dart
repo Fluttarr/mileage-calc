@@ -5,13 +5,16 @@ import 'package:mileage_calculator/pages/settings_page.dart';
 import 'package:mileage_calculator/pages/contact_us.dart';
 import 'package:mileage_calculator/components/gradient_appbar.dart';
 
+// drawer has these properties which is not important i just copy pasted
 class DrawerItem {
   String title;
   IconData icon;
   DrawerItem(this.title, this.icon);
 }
 
+// for adding page follow step 1 and step 2
 class NavPage extends StatefulWidget {
+  // step 1: ----> add pages title and icon here
   final drawerItems = [
     new DrawerItem("Mileage Calculator", Icons.home),
     new DrawerItem("Settings", Icons.settings),
@@ -26,6 +29,9 @@ class NavPage extends StatefulWidget {
 
 class NavPageState extends State<NavPage> {
   int _selectedDrawerIndex = 0;
+  // step 2: ----> add pages class here and new gradient appbar in every case is important
+  // new GradientAppBar(title),
+  //new YourClass name()
 
   _getDrawerItemWidget(int pos, String title) {
     switch (pos) {

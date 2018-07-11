@@ -5,12 +5,14 @@ void main() => runApp(new MyApp());
 
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
+  // app starts here
   final appTitle = 'Mileage calculator';
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
         title: appTitle,
-        home: new NavPage(),
+        home:
+            new NavPage(), // goes to the navpage when app starts file name: nav_drawer
         theme: ThemeData(
           primaryColor: Color(0xFF3366FF),
           accentColor: Colors.cyan[600],
@@ -18,6 +20,7 @@ class MyApp extends StatelessWidget {
   }
 }
 
+// fek noob stuffs write custom code
 // class MyHomePage extends StatelessWidget {
 //   final String title;
 
