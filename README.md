@@ -1,8 +1,7 @@
 # mileage_calculator
 
-A new Flutter project.
+this is a work in progress based on the new flutter hybrid framework 
 
-## Getting Started
+clone or download the zip
 
-For help getting started with Flutter, view our online
-[documentation](https://flutter.io/).
+flutter run
